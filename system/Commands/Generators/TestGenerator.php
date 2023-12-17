@@ -79,7 +79,7 @@ class TestGenerator extends BaseCommand
         $this->template  = 'test.tpl.php';
         $this->namespace = 'Tests';
 
-        $this->classNameLang = 'CLI.generator.className.entity';
+        $this->classNameLang = 'CLI.generator.className.test';
         $this->generateClass($params);
     }
 }
