@@ -448,3 +448,16 @@ if (! function_exists('set_realpath')) {
         return is_dir($path) ? rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR : $path;
     }
 }
+if (! function_exists('get_file_type')) {
+    /*
+        this function is return file extesion name using path
+    */
+    function get_file_type(string $path): string
+    {
+        if(!isset($path) && empty($path)){
+            return 'Path is required';
+        }
+        $fileName = pathinfo($path,PATHINFO_EXTENSION);
+        return $fileName;
+    }
+}
